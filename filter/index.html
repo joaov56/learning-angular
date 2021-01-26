@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" > 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+<body ng-app="mainApp">
+        <div ng-controller="people">
+            <ul>
+                <h2>Names And Age of Programmers In the Local Area:</h2>
+                <li ng-repeat="person in persons | filter:globalSearch">
+                    {{person.Name + ' : ' +  person.Age + ' Fav Color ' + person.fav_color }}
+                </li>
+            </ul>
+        </div>
+
+        <div id="searchBoxes">
+            Global:<input type="text" ng-model="globalSearch.$">
+            Name:<input type="text" ng-model="globalSearch.Name">
+            Age:<input type="text" ng-model="globalSearch.Age">
+            Color:<input type="text" ng-model="globalSearch.fav_color">
+        </div>
+
+    <script src="controller.js"></script>
+
+</body>
+</html>

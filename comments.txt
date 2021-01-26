@@ -47,3 +47,33 @@ ROUTE EXAMPLE:
 you can acess ng-model values using $scope.(name of ng-model)
 
 rootScope is a kind of global variable that can be used in all controllers
+
+resolve inside of routing menas that i can controll where the user will go
+
+
+HTTP :
+
+    var app= angular.module('mainApp', [])
+
+    app.controller('people', function($scope, $http){
+        $http({
+            method: 'GET',
+            url: 'http://127.0.0.1:5500/database.json'
+        }).then(function(response){
+            $scope.persons= response.data.records
+        }).catch(function(err){
+            console.log(err);
+        })
+
+    })
+
+filter into a loop is just '| filter:ng-model'
+
+        <div id="searchBoxes">
+            Global:<input type="text" ng-model="globalSearch.$">
+            Name:<input type="text" ng-model="globalSearch.Name">
+            Age:<input type="text" ng-model="globalSearch.Age">
+            Color:<input type="text" ng-model="globalSearch.fav_color">
+        </div>
+
+and inside the li you put the globalSearch
