@@ -1,0 +1,49 @@
+ng => angular
+
+ng-app= give a base to start your processing like a main functions
+
+ng-model= references a variable name
+
+ng-model = states?
+
+directives are attributes from HTML starting ng-
+
+what that directives do depend on their tasks so ng-model are used for inputs
+
+we pass "attributes" for another divs using ng-bind
+
+ng-init is used to initialize a variable inside of a divs
+
+i can use the ng-init inside of a ng-model
+
+ng-repeat => loop
+
+angular.module to get the instance of the app
+
+ng-controller gives a unique name to a part of your HTML
+i can controll everything in that part of my HTML
+
+
+| means a filter (or masks) for example : | uppercase, lowercase, currency
+
+ng-include=> include like nunjucks
+
+ROUTE EXAMPLE: 
+    let app= angular.module('mainApp', ['ngRoute']);
+
+    app.config(function($routeProvider){
+        $routeProvider
+        .when('/', {
+            templateUrl: 'Welcome user!'
+        })
+        .when('/anotherPage', {
+            templateUrl: 'Welcome, again'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+    })
+
+you can acess ng-model values using $scope.(name of ng-model)
+
+rootScope is a kind of global variable that can be used in all controllers
