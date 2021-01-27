@@ -77,3 +77,11 @@ filter into a loop is just '| filter:ng-model'
         </div>
 
 and inside the li you put the globalSearch
+
+scopeWatch is used to monitoring global variables
+
+to use javascript normal functions we use $scope.$digest
+
+
+SERVICES you use to create a instance of data to use in another controllers
+In one service that will not be reload just if you reload the page
